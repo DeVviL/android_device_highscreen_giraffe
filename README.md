@@ -37,4 +37,4 @@ This branch is for building LineageOS 14.1 ROMS.
 
 #### Known Iusses :- 
  * Nupe :)
-
+ 
