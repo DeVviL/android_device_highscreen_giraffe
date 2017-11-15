@@ -85,8 +85,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/fstab.sprout:root/fstab.sprout \
     $(LOCAL_PATH)/rootdir/root/enableswap.sh:root/enableswap.sh
 	
+# TWRP
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
+
+# Recovery
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/recovery.fstab
 	
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
