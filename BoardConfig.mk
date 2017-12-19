@@ -13,7 +13,8 @@ TARGET_ARCH_VARIANT_CPU := cortex-a7
 TARGET_CPU_VARIANT:= cortex-a7
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
-# NINJA
+# NINJA is enabled for fasted building
+# Set 'false' to disable use NINJA
 USE_NINJA := true
 
 # Block based ota
