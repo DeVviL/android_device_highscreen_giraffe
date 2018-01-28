@@ -2,6 +2,9 @@
 # system.prop for giraffe
 #
 
+# TimeZone set
+persist.sys.timezone = Europe/Moscow
+
 # RIL			  
 rild.libpath=/system/lib/mtk-ril.so
 rild.libargs=-d /dev/ttyC0
