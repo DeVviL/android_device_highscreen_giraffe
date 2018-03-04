@@ -35,3 +35,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/init.sprout.rc:root/init.sprout.rc \
     $(LOCAL_PATH)/rootdir/root/fstab.sprout:root/fstab.sprout
+
+# Release name
+PRODUCT_RELEASE_NAME := Zera F
