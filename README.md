@@ -14,27 +14,5 @@ Camera  | 5MPx
 
 ![Giraffe](http://shop.highscreen.ru/thumb/512x512xin/upload/iblock/745/74501780c3b55a5d0bb61be96063df97.jpg "Highscreen Zera F rev.S")
 
-This branch is for building LineageOS 14.1 ROMS.
+This branch is for building LineageOS 15.1 ROMS.
 
-#### Whats Working ?
- * Wifi
- * Bluetooth
- * Vibration
- * Audio
- * Flashlight (statusbar && Camera)
- * Video Recording
- * Micro SD support
- * MTP and Mass Storage modes
- * Rotation
- * All sensors
- * Doze
- * Offline charging
- * RIL (Call,Data,Msg)
- * Operator name
- * GPS
- * Audio over Bluetooth (music, calls .etc)
- * Hotspot
-
-#### Known Iusses :- 
- * Nupe :)
- 
