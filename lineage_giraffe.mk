@@ -85,15 +85,15 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # RAMDISK
 PRODUCT_COPY_FILES += \
-    device/highscreen/giraffe/rootdir/root/init.sprout_common.rc:root/init.sprout_common.rc \
+    device/highscreen/giraffe/rootdir/root/init.giraffe_common.rc:root/init.giraffe_common.rc \
     device/highscreen/giraffe/rootdir/root/sbin/multi_init:root/sbin/multi_init \
     device/highscreen/giraffe/rootdir/root/init.protect.rc:root/init.protect.rc \
-    device/highscreen/giraffe/rootdir/root/fstab.sprout:root/fstab.sprout \
+    device/highscreen/giraffe/rootdir/root/fstab.giraffe:root/fstab.giraffe \
     device/highscreen/giraffe/rootdir/root/init.modem.rc:root/init.modem.rc \
     device/highscreen/giraffe/rootdir/root/factory_init.rc:root/factory_init.rc \
-    device/highscreen/giraffe/rootdir/root/ueventd.sprout.rc:root/ueventd.sprout.rc \
-    device/highscreen/giraffe/rootdir/root/init.sprout.usb.rc:root/init.sprout.usb.rc \
-    device/highscreen/giraffe/rootdir/root/init.sprout.rc:root/init.sprout.rc 
+    device/highscreen/giraffe/rootdir/root/ueventd.giraffe.rc:root/ueventd.giraffe.rc \
+    device/highscreen/giraffe/rootdir/root/init.giraffe.usb.rc:root/init.giraffe.usb.rc \
+    device/highscreen/giraffe/rootdir/root/init.giraffe.rc:root/init.giraffe.rc 
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -180,7 +180,7 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
 #    android.hardware.sensors@1.0-impl \
 #    android.hardware.sensors@1.0-service \
-#    sensors.sprout
+#    sensors.giraffe
 
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/_hals.conf:system/vendor/etc/sensors/_hals.conf
@@ -232,7 +232,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 	dalvik.vm.image-dex2oat-Xms=64m \
 	dalvik.vm.image-dex2oat-Xmx=64m \
 	ro.dalvik.vm.native.bridge=0 \
-	ro.telephony.ril_class=SproutRIL \
+	ro.telephony.ril_class=MediatekRIL \
         camera.disable_zsl_mode=1
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
