@@ -91,7 +91,7 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/recovery.fstab
+    $(LOCAL_PATH)/rootdir/root/recovery.fstab:recovery/root/etc/recovery.fstab
 	
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
