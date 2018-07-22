@@ -73,16 +73,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/init.sprout_common.rc:root/init.sprout_common.rc \
+    $(LOCAL_PATH)/rootdir/root/init.giraffe_common.rc:root/init.giraffe_common.rc \
     $(LOCAL_PATH)/rootdir/root/sbin/multi_init:root/sbin/multi_init \
     $(LOCAL_PATH)/rootdir/root/init.protect.rc:root/init.protect.rc \
-    $(LOCAL_PATH)/rootdir/root/init.sprout.rc:root/init.sprout.rc \
+    $(LOCAL_PATH)/rootdir/root/init.giraffe.rc:root/init.giraffe.rc \
     $(LOCAL_PATH)/rootdir/root/init.modem.rc:root/init.modem.rc \
     $(LOCAL_PATH)/rootdir/root/factory_init.rc:root/factory_init.rc \
-    $(LOCAL_PATH)/rootdir/root/ueventd.sprout.rc:root/ueventd.sprout.rc \
-    $(LOCAL_PATH)/rootdir/root/init.sprout.usb.rc:root/init.sprout.usb.rc \
+    $(LOCAL_PATH)/rootdir/root/ueventd.giraffe.rc:root/ueventd.giraffe.rc \
+    $(LOCAL_PATH)/rootdir/root/init.giraffe.usb.rc:root/init.giraffe.usb.rc \
     $(LOCAL_PATH)/rootdir/root/init.zeta0y_core.rc:root/init.zeta0y_core.rc \
-    $(LOCAL_PATH)/rootdir/root/fstab.sprout:root/fstab.sprout \
+    $(LOCAL_PATH)/rootdir/root/fstab.giraffe:root/fstab.giraffe \
     $(LOCAL_PATH)/rootdir/root/enableswap.sh:root/enableswap.sh
 	
 # TWRP
@@ -128,7 +128,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
-    libsprout \
+    libshim \
     libxlog
 	
 PRODUCT_PACKAGES += \
@@ -183,7 +183,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 	dalvik.vm.image-dex2oat-Xms=64m \
 	dalvik.vm.image-dex2oat-Xmx=64m \
 	ro.dalvik.vm.native.bridge=0 \
-	ro.hardware=sprout \
+	ro.hardware=giraffe \
 	ro.telephony.ril_class=MediaTekRIL \
         ro.telephony.ril.config=fakeiccid
 

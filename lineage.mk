@@ -33,8 +33,8 @@ TARGET_SCREEN_WIDTH := 480
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/init.sprout.rc:root/init.sprout.rc \
-    $(LOCAL_PATH)/rootdir/root/fstab.sprout:root/fstab.sprout
+    $(LOCAL_PATH)/rootdir/root/init.giraffe.rc:root/init.giraffe.rc \
+    $(LOCAL_PATH)/rootdir/root/fstab.giraffe:root/fstab.giraffe
 
 # Release name
 PRODUCT_RELEASE_NAME := Zera F

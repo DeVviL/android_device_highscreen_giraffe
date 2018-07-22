@@ -29,7 +29,7 @@ LOCAL_SRC_FILES := \
 LOCAL_C_INCLUDES += frameworks/av/media/mtp/ system/core/include/ frameworks/rs/server/ frameworks/av/include/ hardware/libhardware/include/
 LOCAL_SHARED_LIBRARIES := libbinder libutils liblog libgui libui \
                           libicuuc libicui18n libcrypto libstagefright_foundation
-LOCAL_MODULE := libsprout
+LOCAL_MODULE := libshim
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_CLANG := true
