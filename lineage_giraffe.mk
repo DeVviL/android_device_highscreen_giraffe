@@ -150,6 +150,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstlport
 
+# Doze
+#git clone https://github.com/LineageOS/android_packages_resources_devicesettings.git -b cm-14.1 packages/resources/devicesettings
+PRODUCT_PACKAGES += \
+    Doze
+
 # Dynamically set props
 #PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
 #    ro.product.name \
