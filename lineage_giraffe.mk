@@ -145,6 +145,11 @@ PRODUCT_PACKAGES += \
     setup_fs \
     e2fsck \
 
+# stlport
+#git clone https://github.com/LineageOS/android_external_stlport.git -b cm-14.1 external/stlport
+PRODUCT_PACKAGES += \
+    libstlport
+
 # Dynamically set props
 #PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
 #    ro.product.name \
