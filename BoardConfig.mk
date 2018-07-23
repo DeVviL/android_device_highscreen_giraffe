@@ -118,6 +118,10 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_USERIMAGES_USE_EXT4:=true
 USE_CAMERA_STUB := true
 
+# Seccomp
+BOARD_SECCOMP_POLICY += \
+    device/highscreen/giraffe/seccomp
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/highscreen/giraffe/sepolicy
