@@ -73,7 +73,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/init.giraffe_common.rc:root/init.giraffe_common.rc \
     $(LOCAL_PATH)/rootdir/root/sbin/multi_init:root/sbin/multi_init \
     $(LOCAL_PATH)/rootdir/root/init.protect.rc:root/init.protect.rc \
     $(LOCAL_PATH)/rootdir/root/init.giraffe.rc:root/init.giraffe.rc \
