@@ -204,4 +204,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # Superuser
-WITH_SU := true
+#WITH_SU := true
