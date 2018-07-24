@@ -68,3 +68,5 @@ type misc_sd_device, dev_type;
 type sec_ro_device, dev_type;
 type zram0_device, dev_type;
 type persist_block_device, dev_type;
+type fsck_block_device, dev_type;
+type nvram_block_device, dev_type;

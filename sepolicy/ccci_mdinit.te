@@ -25,3 +25,5 @@ allow ccci_mdinit bt_ver_cfg:file { read write getattr open };
 allow ccci_mdinit misc_device:chr_file { read write open };
 allow ccci_mdinit misc_sd_device:chr_file { read open };
 allow ccci_mdinit preloader_device:chr_file { read open };
+
+allow ccci_mdinit ccci_decrypt_state_prop:file { r_file_perms };

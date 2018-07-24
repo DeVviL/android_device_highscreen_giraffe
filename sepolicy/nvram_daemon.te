@@ -34,4 +34,5 @@ allow nvram_daemon nvram_device:chr_file {read write open ioctl};
 allow nvram_daemon pro_info_device:chr_file {read write open ioctl};
 allow nvram_daemon unlabeled:dir { search };
 
+allow nvram_daemon nvram_block_device:blk_file { open read write };
 

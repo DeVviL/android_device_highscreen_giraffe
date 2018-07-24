@@ -1,3 +1,6 @@
 allow fsck cache_device:blk_file { rw_file_perms };
 allow fsck protect_device:blk_file rw_file_perms;
 allow fsck userdata_device:blk_file { rw_file_perms };
+
+allow fsck fsck_block_device:blk_file { rw_file_perms };
+allow fsck nvram_device:blk_file { rw_file_perms };

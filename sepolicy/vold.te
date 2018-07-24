@@ -19,3 +19,6 @@ allow vold proc:file write;
 allow vold misc_device:chr_file { write open };
 allow vold platformblk_device:blk_file { ioctl getattr };
 allow vold zram0_device:blk_file getattr;
+
+allow vold protect_f_data_file:dir { r_file_perms };
+allow vold protect_s_data_file:dir { r_file_perms };

@@ -1,0 +1,5 @@
+allow cameraserver camera_device:chr_file { rw_file_perms };
+allow cameraserver gpu_device:chr_file { r_file_perms };
+allow cameraserver sysfs:file { r_file_perms };
+allow cameraserver nvram_data_file:dir { search };
+allow cameraserver proc_meminfo:file { r_file_perms };
