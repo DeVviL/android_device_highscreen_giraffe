@@ -39,7 +39,7 @@ ro.zygote.preload.enable=0
 ro.kernel.zio=38,108,105,16
 
 # Selinux
-ro.boot.selinux=disable
+#ro.boot.selinux=disable
 
 # Disable dirty region for Mali
 debug.hwui.render_dirty_regions=false
@@ -49,12 +49,12 @@ ro.mediatek.chip_ver=S01
 ro.mediatek.version.release=ALPS.W10.24.p0
 ro.mediatek.platform=MT6582
 ro.mediatek.version.sdk=1
-ro.crypto.state=unencrypted
+#ro.crypto.state=unencrypted
 
 # Wireless Networks
 wifi.supplicant_scan_interval=15
 wifi.interface=wlan0
-ro.hardware=giraffe
+#ro.hardware=giraffe
 ro.mediatek.wlan.wsc=1
 ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0
