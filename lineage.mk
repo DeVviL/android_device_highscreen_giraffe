@@ -14,7 +14,7 @@ CM_BUILD := giraffe
 
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=7.1.2/MRA58M/2280749:user/release-keys PRIVATE_BUILD_DESC="giraffe-user 7.1.2 MRA58M 2280749 release-keys"
+#PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=7.1.2/MRA58M/2280749:user/release-keys PRIVATE_BUILD_DESC="giraffe-user 7.1.2 MRA58M 2280749 release-keys"
 
 PRODUCT_NAME := lineage_giraffe
 PRODUCT_DEVICE := giraffe
