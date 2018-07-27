@@ -16,7 +16,6 @@ patch -p1 < ../../device/highscreen/giraffe/patches/0006-fix-access-wvm-to-ReadO
 patch -p1 < ../../device/highscreen/giraffe/patches/0007-Disable-usage-of-get_capture_position.patch
 patch -p1 < ../../device/highscreen/giraffe/patches/0008-Partial-Revert-Camera1-API-Support-SW-encoders.patch
 patch -p1 < ../../device/highscreen/giraffe/patches/0009-add-mtk-color-format-support.patch
-patch -p1 < ../../device/highscreen/giraffe/patches/0003-add-mising-MediaBufferGroup-acquire_buffer-symbol.patch
 cd ../..
 cd system/netd
 patch -p1 < ../../device/highscreen/giraffe/patches/netd.patch
