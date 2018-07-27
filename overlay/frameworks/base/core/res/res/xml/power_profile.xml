@@ -30,8 +30,8 @@
   <item name="none">0</item>
   <item name="screen.on">120</item>  <!-- ~120mA -->
   <item name="screen.full">250</item>  <!-- ~250mA -->
-  <item name="bluetooth.active">10</item> <!-- Bluetooth data transfer, ~10mA -->
-  <item name="bluetooth.on">0.1</item>  <!-- Bluetooth on & connectable, but not connected, ~0.1mA -->
+  <item name="bluetooth.active">20</item> <!-- Bluetooth data transfer, ~10mA -->
+  <item name="bluetooth.on">0.5</item>  <!-- Bluetooth on & connectable, but not connected, ~0.1mA -->
   <item name="wifi.on">3</item>  <!-- ~3mA -->
   <item name="wifi.active">25</item>  <!-- WIFI data transfer, ~25mA -->
   <item name="wifi.scan">6</item>  <!-- WIFI network scanning, ~6mA -->
@@ -50,17 +50,19 @@
   <!-- Different CPU speeds as reported in
        /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
   <array name="cpu.speeds">
-        <value>500000</value>
-        <value>747500</value>
-        <value>1040000</value>
-        <value>1196000</value>
-        <value>1300000</value>
+        <value>1209000</value>
+        <value>988000</value>
+        <value>754000</value>
+        <value>497250</value>
   </array>
   <!-- Current when CPU is idle -->
   <item name="cpu.idle">2.0</item>
   <!-- Current at each CPU speed, as per 'cpu.speeds' -->
   <array name="cpu.active">
-      <value>100</value>  <!-- ~100mA -->
+        <value>120</value>  <!-- ~120mA -->
+        <value>98</value>  <!-- ~98mA -->
+        <value>75</value>  <!-- ~75mA -->
+        <value>49</value>  <!-- ~49mA -->
   </array>
   <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
   <item name="battery.capacity">1600</item>

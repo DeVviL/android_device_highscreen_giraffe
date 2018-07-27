@@ -27,3 +27,5 @@ allow ccci_mdinit misc_sd_device:chr_file { read open };
 allow ccci_mdinit preloader_device:chr_file { read open };
 
 allow ccci_mdinit ccci_decrypt_state_prop:file { r_file_perms };
+allow ccci_mdinit Vcodec_device:chr_file { rw_file_perms };
+allow ccci_mdinit devmap_device:chr_file { r_file_perms };

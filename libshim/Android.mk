@@ -24,11 +24,12 @@ LOCAL_SRC_FILES := \
     ui.cpp \
     xlog.c \
     xlog_hack.cpp \
-    mtk_hack.cpp
+    mtk_hack.cpp \
+    mtk_omx.cpp
 
 LOCAL_C_INCLUDES += frameworks/av/media/mtp/ system/core/include/ frameworks/rs/server/ frameworks/av/include/ hardware/libhardware/include/
 LOCAL_SHARED_LIBRARIES := libbinder libutils liblog libgui libui \
-                          libicuuc libicui18n libcrypto libstagefright_foundation
+                          libicuuc libicui18n libcrypto libmedia libstagefright_foundation
 LOCAL_MODULE := libshim
 LOCAL_MODULE_TAGS := optional
 

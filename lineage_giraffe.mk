@@ -113,6 +113,10 @@ PRODUCT_PACKAGES += \
     FMRadioGoogle \
     FmRadioTrampoline2
 
+# Display
+PRODUCT_PACKAGES += \
+    libion
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.mt6582\
@@ -144,6 +148,10 @@ PRODUCT_PACKAGES += \
     setup_fs \
     e2fsck \
 
+# GPS
+PRODUCT_PACKAGES += \
+    libcurl
+
 # stlport
 #git clone https://github.com/LineageOS/android_external_stlport.git -b cm-14.1 external/stlport
 PRODUCT_PACKAGES += \
@@ -170,7 +178,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
-	ro.crypto.state=unencrypted \
 	ro.mount.fs=EXT4 \
 	ro.secure=1 \
 	ro.allow.mock.location=0 \

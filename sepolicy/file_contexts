@@ -8,12 +8,10 @@
 /system/bin/nvram_agent_binder u:object_r:nvram_agent_binder_exec:s0
 /system/bin/nvram_daemon      u:object_r:nvram_daemon_exec:s0
 /system/xbin/mnld             u:object_r:mnld_exec:s0
-/system/bin/bmm050d           u:object_r:bmm050d_exec:s0
 /system/bin/permission_check  u:object_r:permission_check_exec:s0														
 /system/bin/msensord          u:object_r:msensord_exec:s0
 /system/bin/thermal_manager   u:object_r:thermal_manager_exec:s0
 /system/bin/wmt_loader        u:object_r:wmt_loader_exec:s0
-/system/bin/bmc156d           u:object_r:bmc156d_exec:s0
 /system/bin/gsm0710muxd       u:object_r:gsm0710muxd_exec:s0
 /system/bin/mtkrild           u:object_r:mtkrild_exec:s0
 /system/bin/muxreport         u:object_r:muxreport_exec:s0
@@ -114,7 +112,7 @@
 /dev/misc(/.*)?          u:object_r:misc_device:s0 
 /dev/misc2               u:object_r:misc_device:s0 
 /dev/sec_ro(/.*)?        u:object_r:sec_ro_device:s0 								  
-/data/misc/sensor/.id                      u:object_r:sensord_data_file:s0
+/data/misc/sensor(/.*)?                    u:object_r:sensord_data_file:s0
 /data/misc/sensor/sensord.log              u:object_r:sensord_data_file:s0
 
 /dev/block/mmcblk0    u:object_r:nvram_block_device:s0
