@@ -11,6 +11,15 @@ on init
     mkdir /protect_f 0771 system system
     mkdir /protect_s 0771 system system
 
+    # See storage config details at http://source.android.com/tech/storage/
+    mkdir /storage/sdcard 0555 root root
+
+    # Support legacy paths
+    symlink storage/sdcard /sdcard
+    symlink storage/sdcard /mnt/sdcard
+
+    # By default, primary storage is physical
+    setprop ro.vold.primary_physical 0
 
     # Change ION driver permission
     chmod 0666 /dev/ion
