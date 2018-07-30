@@ -131,8 +131,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
-    libshim \
-    libxlog
+    libshim
 	
 PRODUCT_PACKAGES += \
     librs_jni \
