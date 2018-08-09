@@ -131,8 +131,8 @@ TARGET_USERIMAGES_USE_EXT4:=true
 USE_CAMERA_STUB := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/highscreen/giraffe/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#    device/highscreen/giraffe/sepolicy
 
 # Symbols
 LINKER_FORCED_SHIM_LIBS := /system/lib/libcam_utils.so|libshim_atomic.so
