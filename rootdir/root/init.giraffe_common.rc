@@ -7,10 +7,11 @@ on early-init
     setprop ro.mtk.hardware mt6582
 
 on init
-    export LD_PRELOAD "/system/lib/libxlog.so"
+    export LD_PRELOAD "/system/lib/libshim.so"
 
     mkdir /protect_f 0771 system system
     mkdir /protect_s 0771 system system
+
 
     # Change ION driver permission
     chmod 0666 /dev/ion
@@ -384,6 +385,7 @@ on post-fs-data
     chmod 0660 /dev/GAF002AF
     chmod 0660 /dev/GAF008AF
     chmod 0660 /dev/CAM_CAL_DRV
+
     chown system camera /dev/camera-sysram
     chown system camera /dev/camera-isp
     chown system camera /dev/camera-pipemgr
@@ -395,7 +397,6 @@ on post-fs-data
     chown system camera /dev/GAF002AF
     chown system camera /dev/GAF008AF
     chown system camera /dev/CAM_CAL_DRV
-
 
     #MATV
     chmod 0660 /dev/MATV
@@ -426,7 +427,9 @@ on post-fs-data
 
     chmod 666 /dev/mali
     chown system graphics /dev/mali
-													
+
+
+
     #sbchk
     mkdir /data/sec 0750 system system
 
@@ -454,7 +457,7 @@ on post-fs-data
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/wpa_supplicant 0770 wifi wifi
     chown wifi wifi /data/misc/wifi
-    chown wifi wifi /dev/wmtWifi								
+    chown wifi wifi /dev/wmtWifi
 #
 # Connectivity related device nodes & configuration (end)
 #
@@ -696,6 +699,55 @@ service wpa_supplicant /system/vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
+service dhcpcd_bt-pan /system/bin/dhcpcd -A -BK -dd
+    class main
+    user dhcp
+    group net_admin net_raw
+    disabled
+    oneshot
+
+service dhcpcd_wlan0 /system/bin/dhcpcd -A -BK -dd
+    class main
+    user dhcp
+    group net_admin net_raw
+    disabled
+    oneshot
+
+service dhcpcd_p2p /system/bin/dhcpcd -A -BK -dd
+    class main
+    user dhcp
+    group net_admin net_raw
+    disabled
+    oneshot
+
+service iprenew_wlan0 /system/bin/dhcpcd -n
+    class main
+    user dhcp
+    group net_admin net_raw
+    disabled
+    oneshot
+
+service iprenew_p2p /system/bin/dhcpcd -n
+    class main
+    user dhcp
+    group net_admin net_raw
+    disabled
+    oneshot
+
+service dhcp6cDNS_wlan0 /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cDNS.conf" -Df wlan0
+    disabled
+    oneshot
+
+service dhcp6c_wlan0 /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6c.conf" -Df wlan0
+    disabled
+    oneshot
+
+on property:service.dhcp6c_wlan0.enable=0
+    stop dhcp6c_wlan0
+
+on property:service.dhcp6c_wlan0.enable=1
+    start dhcp6c_wlan0
+
 service bluetoothd /system/bin/bluetoothd -n
     class main
     socket bluetooth stream 660 bluetooth bluetooth
@@ -709,13 +761,13 @@ service bluetoothd /system/bin/bluetoothd -n
 #  External Modme control related services
 #
 
- service agpsd /system/bin/mtk_agpsd
-     class main
-     socket agpsd stream 660 gps system
-     socket agpsd2 stream 660 gps inet
-    socket agpsd3 stream 660 gps inet
-     user gps
-     group gps inet sdcard_r sdcard_rw misc radio
+# service agpsd /system/bin/mtk_agpsd
+#    class main
+#    socket agpsd stream 660 gps system
+#    socket agpsd2 stream 660 gps inet
+#    socket agpsd3 stream 660 gps inet
+#    user gps
+#    group gps inet sdcard_r sdcard_rw misc radio
 
 service mnld /system/xbin/mnld
     class main
@@ -810,7 +862,7 @@ service shutdown /system/bin/shutdown
     user root
     group root
     disabled
-											 
+
 service thermal_manager /system/bin/thermal_manager
     class main
     user root
