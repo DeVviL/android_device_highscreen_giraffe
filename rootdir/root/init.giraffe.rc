@@ -11,6 +11,12 @@ on init
     mkdir /protect_f 0771 system system
     mkdir /protect_s 0771 system system
 
+    # Support legacy paths
+    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0
+
+    # By default, primary storage is physical
+    setprop ro.vold.primary_physical 1
 
     # Change ION driver permission
     chmod 0666 /dev/ion
