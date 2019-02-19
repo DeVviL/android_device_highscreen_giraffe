@@ -119,7 +119,7 @@ TARGET_USERIMAGES_USE_EXT4:=true
 USE_CAMERA_STUB := true
 
 # Seccomp
-BOARD_SECCOMP_POLICY += \
+BOARD_SECCOMP_POLICY := \
     device/highscreen/giraffe/seccomp
 
 # SELinux
