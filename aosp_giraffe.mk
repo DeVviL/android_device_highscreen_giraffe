@@ -156,11 +156,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstlport
 
-# Doze
-#git clone https://github.com/LineageOS/android_packages_resources_devicesettings.git -b cm-14.1 packages/resources/devicesettings
-PRODUCT_PACKAGES += \
-    Doze
-
 # Dynamically set props
 #PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
 #    ro.product.name \
@@ -208,5 +203,36 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 USE_CUSTOM_AUDIO_POLICY := 1
 
-# Superuser
-#WITH_SU := true
+# Full base
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+
+# Needed stuff
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+LOCAL_PATH := device/highscreen/giraffe
+
+
+#PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=7.1.2/MRA58M/2280749:user/release-keys PRIVATE_BUILD_DESC="giraffe-user 7.1.2 MRA58M 2280749 release-keys"
+
+PRODUCT_NAME := aosp_giraffe
+PRODUCT_DEVICE := giraffe
+PRODUCT_BRAND := Highscreen
+PRODUCT_MANUFACTURER := Mediatek
+PRODUCT_MODEL := Zera F
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_DEVICE="giraffe"
+
+# Correct bootanimation size for the screen
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/root/init.giraffe.rc:root/init.giraffe.rc \
+    $(LOCAL_PATH)/rootdir/root/fstab.giraffe:root/fstab.giraffe
+
+# Release name
+PRODUCT_RELEASE_NAME := Zera F
